@@ -32,14 +32,9 @@
             echo '</h1>';
           } ?>
         </div>
-        <div id="site-description">
-          <?php bloginfo('description'); ?>
-        </div>
+
       </div>
       <nav id="menu">
-        <div id="search">
-          <?php get_search_form(); ?>
-        </div>
         <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
       </nav>
     </header>
