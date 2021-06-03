@@ -17,7 +17,6 @@ add_action('after_setup_theme', 'mandarinenfilm_setup');
 function mandarinenfilm_load_scripts()
 {
     wp_enqueue_style('mandarinenfilm-style', get_stylesheet_uri());
-    wp_enqueue_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'mandarinenfilm_load_scripts');
 
