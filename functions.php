@@ -8,7 +8,7 @@ function mandarinenfilm_setup()
     add_theme_support('html5', array('search-form'));
     register_nav_menus(
         array(
-            'main-menu' => esc_html__('Main Menu', 'mandarinenfilm')
+            'top-nav' => esc_html__('Top Navigation', 'mandarinenfilm')
         )
     );
 }

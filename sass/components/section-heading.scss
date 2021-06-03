@@ -1,0 +1,15 @@
+.section-heading {
+	text-align: center;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding-block-start: calc(var(--gap)*2);
+		padding-block-end: calc(var(--gap)*2.7);
+	}
+	a {
+		text-decoration: none;
+	}
+}

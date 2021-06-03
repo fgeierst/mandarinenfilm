@@ -3,7 +3,7 @@ Theme Name: Mandarinenfilm
 Author: Florian Geierstanger
 Description: based on mandarinenfilm, blankslate
 */
-:root { --border-color: black; --border: 1px solid var(--border-color); --base-font: system-ui, sans-serif; --headings-font: 'Junius', serif; }
+:root { --border-color: black; --border: 1px solid var(--border-color); --base-font: system-ui, sans-serif; --headings-font: 'Junius', serif; --gap: 1em; }
 
 body { line-height: 1; }
 
@@ -62,6 +62,22 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--headings-font); font-weight: 700; }
 
 a { color: inherit; }
 
-.nav { color: blue; }
+.menu { padding-inline-start: 0; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: calc(var(--gap)*2); padding-inline-end: var(--gap); }
+
+.menu-item { text-transform: uppercase; letter-spacing: 0.125em; }
+
+.menu-item a { text-decoration: none; }
+
+.menu-item a:hover { border-block-end: 2px solid black; }
+
+.menu-item a:focus-visible { box-shadow: 0 0 0 7px white, 0 0 0 8px black; outline: none; }
+
+.section { border-block-end: var(--border); }
+
+.section-heading { text-align: center; }
+
+.section-heading h1, .section-heading h2, .section-heading h3, .section-heading h4, .section-heading h5, .section-heading h6 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2.7); }
+
+.section-heading a { text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
