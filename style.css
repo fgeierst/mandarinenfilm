@@ -113,6 +113,4 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .film-card__content > .wp-block-group__inner-container { background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.27) 23%, rgba(255, 255, 255, 0) 100%); padding: var(--gap); display: flex; flex-direction: column; justify-content: space-between; }
 
-.film-card__title { text-align: center; }
-
 /*# sourceMappingURL=style.css.map */
