@@ -79,8 +79,8 @@ time,
 mark,
 audio,
 video {
-	// margin: 0;
-	// padding: 0;
+	margin: 0;
+	padding: 0;
 	// border: 0;
 	// font-size: 100%;
 	// font: inherit;
@@ -217,6 +217,6 @@ section {
 /* ---------  fix block images aspect ratio bug  */
 .wp-block-image img,
 .wp-block-image svg {
-	max-width: 100%;
+	// max-width: 100%;
 	height: auto;
 }

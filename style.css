@@ -3,7 +3,9 @@ Theme Name: Mandarinenfilm
 Author: Florian Geierstanger
 Description: based on mandarinenfilm, blankslate
 */
-:root { --border-color: black; --border: 1px solid var(--border-color); --base-font: system-ui, sans-serif; --headings-font: 'Junius', serif; --gap: 1em; }
+:root { --border-color: black; --border: 1px solid var(--border-color); --font: 'Junius', serif; --font-sans-serif: system-ui, sans-serif; --gap: 1em; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
 
 body { line-height: 1; }
 
@@ -54,17 +56,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
 
 /* ---------  fix block images aspect ratio bug  */
-.wp-block-image img, .wp-block-image svg { max-width: 100%; height: auto; }
+.wp-block-image img, .wp-block-image svg { height: auto; }
 
-body { font-family: var(--base-font); }
+body { font-family: var(--font); font-weight: 400; font-size: calc(clamp(1rem, 0.5rem + 1vw, 1.25rem)); line-height: 1.4; }
 
-h1, h2, h3, h4, h5, h6 { font-family: var(--headings-font); font-weight: 700; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: unset; }
 
 a { color: inherit; }
 
+body { padding: var(--gap); }
+
 .menu { padding-inline-start: 0; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: calc(var(--gap)*2); padding-inline-end: var(--gap); }
 
-.menu-item { text-transform: uppercase; letter-spacing: 0.125em; }
+.menu-item { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; }
 
 .menu-item a { text-decoration: none; }
 
@@ -74,10 +78,27 @@ a { color: inherit; }
 
 .section { border-block-end: var(--border); }
 
+.section .wp-block-column > *:not(.wp-block-cover) { margin-block: var(--gap); }
+
+@media (min-width: 600px) { .section .wp-block-column:not(:last-child) { border-inline-end: var(--border); }
+	.section .wp-block-column > *:not(.wp-block-cover) { margin: var(--gap); } }
+
+@media (max-width: 599px) { .section .wp-block-column:not(:last-child) { border-block-end: var(--border); } }
+
+.section.wp-block-columns { margin-block-end: 0; }
+
+.section .wp-block-cover { margin-block-end: 0; }
+
+.section .wp-block-cover img { display: block; }
+
+.section .wp-block-column:not(:first-child) { margin-left: 0; }
+
 .section-heading { text-align: center; }
 
-.section-heading h1, .section-heading h2, .section-heading h3, .section-heading h4, .section-heading h5, .section-heading h6 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2.7); }
+.section-heading h1 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2.7); }
 
 .section-heading a { text-decoration: none; }
+
+h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, h6.section-heading { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2); }
 
 /*# sourceMappingURL=style.css.map */

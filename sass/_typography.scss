@@ -1,5 +1,8 @@
 body {
-	font-family: var(--base-font);
+	font-family: var(--font);
+	font-weight: 400;
+	font-size: calc(clamp(1rem, 0.5rem + 1vw, 1.25rem));
+	line-height: 1.4;
 }
 
 h1,
@@ -8,8 +11,8 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--headings-font);
 	font-weight: 700;
+	line-height: unset;
 }
 
 a {
