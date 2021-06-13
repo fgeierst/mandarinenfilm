@@ -22,7 +22,7 @@
     <header class="section" id="header">
 
       <nav id="menu" class="nav">
-        <?php wp_nav_menu(array('theme_location' => 'main-menu')); ?>
+        <?php wp_nav_menu(array('theme_location' => 'top-nav')); ?>
       </nav>
 
       <div class="site-title section-heading">
