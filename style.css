@@ -109,6 +109,11 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .news-cards-wrapper::-webkit-scrollbar-thumb { background-color: black; }
 
+/* enable scroll snaping for touch devices */
+/* TODO: needs testing */
+@media (pointer: none) { .news-cards-wrapper { scroll-snap-type: x proximity; }
+	.news-cards > li { scroll-snap-align: start; } }
+
 .news-cards { display: flex; }
 
 .news-cards > li { min-width: 25rem; min-height: 25rem; aspect-ratio: 1/1; overflow: hidden; border-inline-end: 1px solid black; border-block-end: 1px solid black; padding: var(--gap); display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); }
@@ -117,7 +122,7 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .news-card__date { font-family: var(--font-sans-serif); text-transform: uppercase; font-size: 90%; }
 
-.news-card__content { display: grid; }
+.news-card__content { display: grid; overflow: hidden; }
 
 .news-card__content > .wp-block-group__inner-container { display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); align-items: center; }
 

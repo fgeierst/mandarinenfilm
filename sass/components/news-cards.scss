@@ -13,6 +13,17 @@
 	}
 }
 
+/* enable scroll snaping for touch devices */
+/* TODO: needs testing */
+@media (pointer: none) {
+	.news-cards-wrapper {
+		scroll-snap-type: x proximity;
+	}
+	.news-cards > li {
+		scroll-snap-align: start;
+	}
+}
+
 .news-cards {
 	display: flex;
 	& > li {
@@ -44,6 +55,7 @@
 	}
 	&__content {
 		display: grid;
+		overflow: hidden;
 	}
 	&__content > .wp-block-group__inner-container {
 		display: grid;
