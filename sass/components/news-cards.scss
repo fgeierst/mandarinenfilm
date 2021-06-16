@@ -1,0 +1,48 @@
+.news-cards {
+	display: flex;
+	justify-content: start;
+	border-block-end: var(--border);
+	& > li {
+		flex: 1;
+		padding: var(--gap);
+		aspect-ratio: 1/1;
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		gap: var(--gap);
+		// width: 20rem;
+	}
+	& > li:not(:last-child) {
+		border-inline-end: var(--border);
+	}
+	& a {
+		text-decoration: none;
+	}
+}
+
+.news-card {
+	&__date {
+		font-family: var(--font-sans-serif);
+		text-transform: uppercase;
+		font-size: 90%;
+	}
+	&__content {
+		display: grid;
+	}
+	&__content > .wp-block-group__inner-container {
+		display: grid;
+		grid-template-rows: min-content 1fr;
+		gap: var(--gap);
+		align-items: center;
+	}
+	&__title {
+		text-align: center;
+		font-size: inherit;
+		font-weight: inherit;
+	}
+	&__image {
+		padding: var(--gap);
+		& img {
+			display: block;
+		}
+	}
+}
