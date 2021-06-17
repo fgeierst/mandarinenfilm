@@ -1,7 +1,8 @@
 .section {
 	border-block-end: var(--border);
 	.wp-block-column > *:not(.wp-block-cover) {
-		margin-block: var(--gap);
+		margin-block-start: var(--gap);
+		margin-block-end: var(--gap);
 	}
 	@media (min-width: 600px) {
 		.wp-block-column:not(:last-child) {
