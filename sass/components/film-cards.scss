@@ -1,11 +1,18 @@
+.film-cards-wrapper {
+	@include auto-scroll-wrapper;
+}
+
 .film-cards {
 	--dark-background: #202124;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-auto-flow: column;
 	& > li {
-		aspect-ratio: 3/4;
+		@include auto-scroll-item;
+		width: 17em;
+		height: 22em;
+		border-inline-end: 4px solid white;
+		border-block-end: var(--border);
 		display: grid;
-		width: 20rem;
 		background-color: var(--dark-background);
 		color: white;
 		text-align: center;

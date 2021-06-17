@@ -1,38 +1,15 @@
 .news-cards-wrapper {
-	overflow-x: auto; // for auto-scrolling cards, set `overflow-x` on the wrapper!
-	-webkit-overflow-scrolling: auto;
-	&::-webkit-scrollbar {
-		height: .9rem;
-	}
-	&::-webkit-scrollbar-track {
-		background-color: transparent;
-	}
-	&::-webkit-scrollbar-thumb {
-		background-color: hsl(0, 0%, 0%);
-	}
-}
-
-/* enable scroll snaping for touch devices */
-/* TODO: needs testing */
-@media (hover: none) {
-	.news-cards-wrapper {
-		// scroll-snap-type: x proximity;
-		scroll-snap-type: x mandatory;
-	}
-	.news-cards > li {
-		scroll-snap-align: center;
-	}
+	@include auto-scroll-wrapper;
 }
 
 .news-cards {
 	display: grid;
 	grid-auto-flow: column;
+
 	& > li {
+		@include auto-scroll-item;
 		width: 20em;
 		height: 20em;
-		// min-width: 25rem; // square card
-		// min-height: 25rem; // square card
-		// aspect-ratio: 1/1; // square card
 		overflow: hidden;
 		border-block-end: var(--border);
 		padding: var(--gap);
