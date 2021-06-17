@@ -1,11 +1,7 @@
 .film-cards {
 	--dark-background: #202124;
 	display: flex;
-	// flex-wrap: wrap;
 	justify-content: center;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-	// overflow-x: scroll;
 	& > li {
 		aspect-ratio: 3/4;
 		display: grid;

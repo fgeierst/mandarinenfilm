@@ -115,12 +115,12 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 /* enable scroll snaping for touch devices */
 /* TODO: needs testing */
-@media (pointer: none) { .news-cards-wrapper { scroll-snap-type: x proximity; }
+@media (hover: none) { .news-cards-wrapper { scroll-snap-type: x proximity; }
 	.news-cards > li { scroll-snap-align: start; } }
 
-.news-cards { display: flex; }
+.news-cards { display: grid; grid-auto-flow: column; }
 
-.news-cards > li { min-width: 25rem; min-height: 25rem; aspect-ratio: 1/1; overflow: hidden; border-block-end: var(--border); padding: var(--gap); display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); }
+.news-cards > li { width: 20em; height: 20em; overflow: hidden; border-block-end: var(--border); padding: var(--gap); display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); }
 
 .news-cards > li:not(:last-child) { border-inline-end: var(--border); }
 

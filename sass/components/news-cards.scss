@@ -14,7 +14,7 @@
 
 /* enable scroll snaping for touch devices */
 /* TODO: needs testing */
-@media (pointer: none) {
+@media (hover: none) {
 	.news-cards-wrapper {
 		scroll-snap-type: x proximity;
 	}
@@ -24,11 +24,14 @@
 }
 
 .news-cards {
-	display: flex;
+	display: grid;
+	grid-auto-flow: column;
 	& > li {
-		min-width: 25rem; // square card
-		min-height: 25rem; // square card
-		aspect-ratio: 1/1; // square card
+		width: 20em;
+		height: 20em;
+		// min-width: 25rem; // square card
+		// min-height: 25rem; // square card
+		// aspect-ratio: 1/1; // square card
 		overflow: hidden;
 		border-block-end: var(--border);
 		padding: var(--gap);
