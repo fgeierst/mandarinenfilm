@@ -124,7 +124,7 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .news-cards > li:not(:last-child) { border-inline-end: var(--border); }
 
-.news-card__date { font-family: var(--font-sans-serif); text-transform: uppercase; font-size: 90%; }
+.news-card__date { font-family: var(--font-sans-serif); text-transform: uppercase; font-size: 75%; }
 
 .news-card__content { display: grid; overflow: hidden; }
 
