@@ -31,9 +31,7 @@
 		min-height: 25rem; // square card
 		aspect-ratio: 1/1; // square card
 		overflow: hidden;
-		border-inline-end: 1px solid black;
-		border-block-end: 1px solid black;
-
+		border-block-end: var(--border);
 		padding: var(--gap);
 		display: grid;
 		grid-template-rows: min-content 1fr;
@@ -41,9 +39,6 @@
 	}
 	& > li:not(:last-child) {
 		border-inline-end: var(--border);
-	}
-	& a {
-		// text-decoration: none;
 	}
 }
 

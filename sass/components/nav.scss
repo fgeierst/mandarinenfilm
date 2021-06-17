@@ -8,14 +8,16 @@
 	padding-inline-start: 0;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-end;
-	gap: calc(var(--gap)*2);
-	padding-inline-end: var(--gap);
-
+	justify-content: space-around;
+	// padding-inline-end: var(--gap);
+	@media (min-width: 700px) {
+		justify-content: flex-end;
+	}
 	&-item {
 		font-family: var(--font-sans-serif);
 		text-transform: uppercase;
 		letter-spacing: 0.125em;
+		margin-block-end: var(--gap);
 		a {
 			text-decoration: none;
 		}
@@ -26,5 +28,8 @@
 			box-shadow: 0 0 0 7px white, 0 0 0 8px black; // focus ring
 			outline: none;
 		}
+	}
+	&-item:not(:last-child) {
+		margin-inline-end: var(--gap);
 	}
 }
