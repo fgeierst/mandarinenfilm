@@ -1,6 +1,7 @@
 @mixin auto-scroll-wrapper {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: auto;
+	border-block-end: none !important;
 	&::-webkit-scrollbar {
 		height: .6rem;
 	}

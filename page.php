@@ -7,7 +7,7 @@
         <header class="header">
           <?php if (!(is_front_page() || is_home() || is_front_page() && is_home())) {
           ?>
-            <h1 class="entry-title">
+            <h1 class="entry-title section-heading">
               <?php the_title(); ?>
             </h1>
           <?php } ?>
@@ -15,13 +15,10 @@
           <!-- <?php edit_post_link(); ?> -->
         </header>
         <div class="entry-content">
-          <?php if (has_post_thumbnail()) {
-            the_post_thumbnail();
-          }
-          the_content(); ?>
-          <div class="entry-links">
-            <?php wp_link_pages(); ?>
-          </div>
+          <!-- <?php if (has_post_thumbnail()) {
+                  the_post_thumbnail();
+                } ?> -->
+          <?php the_content(); ?>
         </div>
       </article>
   <?php if (comments_open() && !post_password_required()) {

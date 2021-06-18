@@ -5,20 +5,21 @@
 .news-cards {
 	display: grid;
 	grid-auto-flow: column;
-
+	margin-inline-end: var(--gap);
 	& > li {
 		@include auto-scroll-item;
 		width: 20em;
 		height: 20em;
 		overflow: hidden;
+		border-inline-end: var(--border);
 		border-block-end: var(--border);
 		padding: var(--gap);
 		display: grid;
 		grid-template-rows: min-content 1fr;
 		gap: var(--gap);
 	}
-	& > li:not(:last-child) {
-		border-inline-end: var(--border);
+	& > li:first-child {
+		border-inline-start: var(--border);
 	}
 }
 
