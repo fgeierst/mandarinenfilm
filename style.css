@@ -107,7 +107,7 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .news-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; }
 
-.news-cards-wrapper::-webkit-scrollbar { height: .9rem; }
+.news-cards-wrapper::-webkit-scrollbar { height: .6rem; }
 
 .news-cards-wrapper::-webkit-scrollbar-track { background-color: transparent; }
 
@@ -137,7 +137,7 @@ h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, 
 
 .film-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; }
 
-.film-cards-wrapper::-webkit-scrollbar { height: .9rem; }
+.film-cards-wrapper::-webkit-scrollbar { height: .6rem; }
 
 .film-cards-wrapper::-webkit-scrollbar-track { background-color: transparent; }
 
