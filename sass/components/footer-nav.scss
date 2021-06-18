@@ -29,12 +29,19 @@
 	}
 }
 .footer-widget-area {
+	@media (max-width: 599px) {
+		.wp-block-buttons.is-content-justification-center {
+			justify-content: unset;
+		}
+	}
+	@media (min-width: 600px) and (max-width: 781px) {
+		.wp-block-buttons.is-content-justification-center {
+			justify-content: center;
+		}
+	}
 	@media (max-width: 781px) {
 		.is-vertical.items-justified-right > ul .wp-block-navigation-link,
 		.is-vertical.items-justified-right > ul .wp-block-pages-list__item {
-			justify-content: unset;
-		}
-		.wp-block-buttons.is-content-justification-center {
 			justify-content: unset;
 		}
 		.wp-block-column {

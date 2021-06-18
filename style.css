@@ -92,8 +92,11 @@ body { padding: var(--gap); }
 
 .footer-menu-item:not(:last-child) { margin-inline-end: var(--gap); }
 
+@media (max-width: 599px) { .footer-widget-area .wp-block-buttons.is-content-justification-center { justify-content: unset; } }
+
+@media (min-width: 600px) and (max-width: 781px) { .footer-widget-area .wp-block-buttons.is-content-justification-center { justify-content: center; } }
+
 @media (max-width: 781px) { .footer-widget-area .is-vertical.items-justified-right > ul .wp-block-navigation-link, .footer-widget-area .is-vertical.items-justified-right > ul .wp-block-pages-list__item { justify-content: unset; }
-	.footer-widget-area .wp-block-buttons.is-content-justification-center { justify-content: unset; }
 	.footer-widget-area .wp-block-column { margin-block-end: var(--gap); } }
 
 .section { border-block-end: var(--border); }
