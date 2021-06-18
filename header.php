@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.svg">
   <?php wp_head(); ?>
-  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/red-hat-text-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/JuniusVF.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     @font-face {
       font-family: 'Junius';
