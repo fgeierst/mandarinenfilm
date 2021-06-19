@@ -8,9 +8,10 @@
 
 	a {
 		text-decoration: none;
+		border-block-end: 2px solid transparent;
 	}
 	a:hover {
-		border-block-end: 2px solid black; // underline
+		border-block-end: 2px solid black;
 	}
 	a:focus-visible {
 		box-shadow: 0 0 0 7px white, 0 0 0 8px black; // focus ring

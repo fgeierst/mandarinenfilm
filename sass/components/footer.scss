@@ -1,5 +1,8 @@
-#footer h2 {
-	text-align: unset;
-	padding-block-start: 0;
-	padding-block-end: 0;
+#footer {
+	padding: var(--gap);
+	& h2 {
+		text-align: unset;
+		padding-block-start: 0;
+		padding-block-end: 0;
+	}
 }

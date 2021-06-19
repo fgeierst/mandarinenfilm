@@ -3,7 +3,7 @@ Theme Name: Mandarinenfilm
 Author: Florian Geierstanger
 Description: based on mandarinenfilm, blankslate
 */
-:root { --border-color: black; --border: 1px solid var(--border-color); --font: 'Junius', serif; --font-sans-serif: system-ui, sans-serif; --gap: 1em; }
+:root { --dark-color: #1e2327; --border: 1px solid var(--dark-color); --font: 'Junius', serif; --font-sans-serif: system-ui, sans-serif; --gap: 1em; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; }
 
@@ -60,23 +60,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body { font-family: var(--font); font-weight: 400; font-size: calc(clamp(1rem, 0.5rem + 1vw, 1.25rem)); line-height: 1.4; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: unset; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; line-height: unset; color: var(--dark-color); }
 
 a { color: inherit; }
 
-.is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline { border-width: 1px; }
+.is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline { border-width: 1px; border-color: var(--dark-color); }
 
-#header { display: flex; flex-direction: column; flex-wrap: wrap; }
+#header { display: flex; flex-direction: column; flex-wrap: wrap; padding: var(--gap); }
 
 @media (min-width: 700px) { #header { flex-direction: row; justify-content: space-between; } }
 
 .site-title { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; text-align: center; margin-block-end: var(--gap); }
 
-.site-title a { text-decoration: none; }
+.site-title a { text-decoration: none; border-block-end: 2px solid transparent; }
 
 .site-title a:hover { border-block-end: 2px solid black; }
 
 .site-title a:focus-visible { box-shadow: 0 0 0 7px white, 0 0 0 8px black; outline: none; }
+
+.header { border-block-end: var(--border); }
 
 .menu { padding-inline-start: 0; display: flex; flex-wrap: wrap; justify-content: space-around; }
 
@@ -84,7 +86,7 @@ a { color: inherit; }
 
 .menu-item { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; margin-block-end: var(--gap); }
 
-.menu-item a { text-decoration: none; }
+.menu-item a { text-decoration: none; border-block-end: 2px solid transparent; }
 
 .menu-item a:hover { border-block-end: 2px solid black; }
 
@@ -92,11 +94,13 @@ a { color: inherit; }
 
 .menu-item:not(:last-child) { margin-inline-end: calc(var(--gap)*2); }
 
+#footer { padding: var(--gap); }
+
 #footer h2 { text-align: unset; padding-block-start: 0; padding-block-end: 0; }
 
 .footer-menu li { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; margin-block-end: var(--gap); }
 
-.footer-menu li a { text-decoration: none; }
+.footer-menu li a { text-decoration: none; border-block-end: 2px solid transparent; }
 
 .footer-menu li a:hover { border-block-end: 2px solid black; }
 
@@ -111,11 +115,28 @@ a { color: inherit; }
 @media (max-width: 781px) { .footer-widget-area .is-vertical.items-justified-right > ul .wp-block-navigation-link, .footer-widget-area .is-vertical.items-justified-right > ul .wp-block-pages-list__item { justify-content: unset; }
 	.footer-widget-area .wp-block-column { margin-block-end: var(--gap); } }
 
-.wp-block-columns { margin-bottom: 0; }
+.entry-content p, .entry-content a, .entry-content ul, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 { margin-block-end: calc(var(--gap)/2); }
 
-@media (max-width: 599px) { .wp-block-column:not(:last-child) { border-block-end: var(--border); } }
+.entry-content > .wp-block-group { display: grid; grid-template-columns: 1fr minmax(auto, 55em) 1fr; border-bottom: var(--border); }
 
-#content > article > .entry-content:first-of-type > *, #footer-widgets > ul > *:not(:last-child) { border-block-end: var(--border); }
+.entry-content > .wp-block-group > * { grid-column: 2 / -2; padding-inline-start: var(--gap); padding-inline-end: var(--gap); padding-block-start: var(--gap); }
+
+.entry-content > .wp-block-group.alignwide > * { padding-block-start: 0; }
+
+.entry-content > .wp-block-group.alignfull > * { grid-column: 1 / -1; }
+
+.entry-content > .wp-block-group .wp-block-columns { margin-block-end: 0; }
+
+.entry-content > .wp-block-group .wp-block-column { padding-block-start: var(--gap); padding-block-end: var(--gap); }
+
+@media (max-width: 599px) { .entry-content > .wp-block-group .wp-block-columns:not(:last-child) { border-block-end: var(--border); }
+	.entry-content > .wp-block-group .wp-block-columns .wp-block-column:not(:last-child) { border-block-end: var(--border); } }
+
+@media (min-width: 600px) { .entry-content > .wp-block-group .wp-block-columns:not(:last-child) .wp-block-column { border-block-end: var(--border); }
+	.entry-content > .wp-block-group .wp-block-column:not(:last-child) { border-inline-end: var(--border); padding-inline-end: var(--gap); }
+	.entry-content > .wp-block-group .wp-block-column:not(:first-child) { margin-inline-start: 0; padding-inline-start: var(--gap); } }
+
+.entry-content > .wp-block-group .wp-block-image { margin: 0; display: flex; }
 
 h1, h2 { text-align: center; }
 
@@ -127,11 +148,13 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 
 .news-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; border-block-end: none !important; }
 
+.news-cards-wrapper ul, .news-cards-wrapper a { margin-block-end: 0; }
+
 .news-cards-wrapper::-webkit-scrollbar { height: .6rem; }
 
 .news-cards-wrapper::-webkit-scrollbar-track { background-color: transparent; }
 
-.news-cards-wrapper::-webkit-scrollbar-thumb { background-color: black; }
+.news-cards-wrapper::-webkit-scrollbar-thumb { background-color: var(--dark-color); }
 
 @media (hover: none) { .news-cards-wrapper { scroll-snap-type: x mandatory; } }
 
@@ -157,17 +180,19 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 
 .film-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; border-block-end: none !important; }
 
+.film-cards-wrapper ul, .film-cards-wrapper a { margin-block-end: 0; }
+
 .film-cards-wrapper::-webkit-scrollbar { height: .6rem; }
 
 .film-cards-wrapper::-webkit-scrollbar-track { background-color: transparent; }
 
-.film-cards-wrapper::-webkit-scrollbar-thumb { background-color: black; }
+.film-cards-wrapper::-webkit-scrollbar-thumb { background-color: var(--dark-color); }
 
 @media (hover: none) { .film-cards-wrapper { scroll-snap-type: x mandatory; } }
 
-.film-cards { --dark-background: #202124; display: grid; grid-auto-flow: column; }
+.film-cards { display: grid; grid-auto-flow: column; justify-content: center; }
 
-.film-cards > li { width: 17em; height: 22em; border-inline-end: 4px solid white; border-block-end: var(--border); display: grid; background-color: var(--dark-background); color: white; text-align: center; }
+.film-cards > li { width: 17em; height: 22em; border-inline-end: 4px solid white; border-block-end: var(--border); display: grid; background-color: var(--dark-color); color: white; text-align: center; }
 
 @media (hover: none) { .film-cards > li { scroll-snap-align: center; } }
 
@@ -178,5 +203,7 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 .film-card__content img, .film-card__image img { object-fit: cover; width: 100%; height: 100%; }
 
 .film-card__content > .wp-block-group__inner-container { background: linear-gradient(180deg, rgba(0, 0, 0, 0.39) 0%, rgba(0, 0, 0, 0.27) 23%, rgba(255, 255, 255, 0) 100%); padding: var(--gap); display: flex; flex-direction: column; justify-content: space-between; }
+
+.film-card__title { color: white; }
 
 /*# sourceMappingURL=style.css.map */

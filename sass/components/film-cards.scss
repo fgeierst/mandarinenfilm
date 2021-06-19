@@ -3,9 +3,9 @@
 }
 
 .film-cards {
-	--dark-background: #202124;
 	display: grid;
 	grid-auto-flow: column;
+	justify-content: center;
 	& > li {
 		@include auto-scroll-item;
 		width: 17em;
@@ -13,7 +13,7 @@
 		border-inline-end: 4px solid white;
 		border-block-end: var(--border);
 		display: grid;
-		background-color: var(--dark-background);
+		background-color: var(--dark-color);
 		color: white;
 		text-align: center;
 	}
@@ -45,5 +45,8 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+	}
+	&__title {
+		color: white;
 	}
 }

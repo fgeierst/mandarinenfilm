@@ -6,6 +6,7 @@ function mandarinenfilm_setup()
     add_theme_support('automatic-feed-links');
     add_theme_support('post-thumbnails');
     add_theme_support('html5', array('search-form'));
+    add_theme_support('align-wide');
     register_nav_menus(
         array(
             'top-nav' => esc_html__('Top Navigation', 'mandarinenfilm')
