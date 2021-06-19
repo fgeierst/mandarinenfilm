@@ -1,17 +1,21 @@
 .film-cards-wrapper {
 	@include auto-scroll-wrapper;
+	display: flex;
+	justify-content: center;
+	@media (min-width: 1300px) {
+		border-block-end: var(--border);
+	}
 }
 
 .film-cards {
 	display: grid;
 	grid-auto-flow: column;
-	// justify-content: center;
 	& > li {
 		@include auto-scroll-item;
 		width: 17em;
 		height: 22em;
 		border-inline-end: 4px solid white;
-		border-block-end: var(--border);
+		// border-block-end: var(--border);
 		display: grid;
 		background-color: var(--dark-color);
 		color: white;

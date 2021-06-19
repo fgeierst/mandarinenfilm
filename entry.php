@@ -13,7 +13,7 @@
         } else {
             echo '</h2>';
         }
-        edit_post_link();
+        // edit_post_link();
         if (!is_search()) {
             get_template_part('entry', 'meta');
         } ?>

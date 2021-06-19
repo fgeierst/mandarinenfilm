@@ -1,7 +1,7 @@
 @mixin auto-scroll-wrapper {
 	overflow-x: auto;
 	-webkit-overflow-scrolling: auto;
-	border-block-end: none !important;
+	border-block-end: none;
 	& ul,
 	a {
 		margin-block-end: 0;

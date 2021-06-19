@@ -1,5 +1,5 @@
 #footer {
-	padding: var(--gap);
+	padding: calc(var(--gap)*2) var(--gap) var(--gap) var(--gap);
 	& h2 {
 		text-align: unset;
 		padding-block-start: 0;

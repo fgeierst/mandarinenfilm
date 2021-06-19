@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<!-- INDEX -->
+<!-- index.php -->
 <main id="content">
   <header class="header">
     <h1 class="entry-title">
