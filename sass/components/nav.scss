@@ -14,22 +14,10 @@
 		justify-content: flex-end;
 	}
 	&-item {
-		font-family: var(--font-sans-serif);
-		text-transform: uppercase;
-		letter-spacing: 0.125em;
+		@include nav-link;
 		margin-block-end: var(--gap);
-		a {
-			text-decoration: none;
-		}
-		a:hover {
-			border-block-end: 2px solid black; // underline
-		}
-		a:focus-visible {
-			box-shadow: 0 0 0 7px white, 0 0 0 8px black; // focus ring
-			outline: none;
-		}
 	}
 	&-item:not(:last-child) {
-		margin-inline-end: var(--gap);
+		margin-inline-end: calc(var(--gap)*2);
 	}
 }

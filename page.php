@@ -5,12 +5,13 @@
       the_post(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="header">
-          <?php if (!(is_front_page() || is_home() || is_front_page() && is_home())) {
+          <?php // if (!(is_front_page() || is_home() || is_front_page() && is_home())) {
           ?>
-            <h1 class="entry-title section-heading">
-              <?php the_title(); ?>
-            </h1>
-          <?php } ?>
+          <h1 class="entry-title">
+            <?php the_title(); ?>
+          </h1>
+          <?php // } 
+          ?>
 
           <!-- <?php edit_post_link(); ?> -->
         </header>
@@ -27,5 +28,5 @@
     }
   } ?>
 </main>
-<?php get_sidebar();
+<?php // get_sidebar();
 get_footer();

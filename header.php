@@ -19,23 +19,25 @@
 
 <body <?php body_class(); ?>>
   <div id="wrapper" class="hfeed">
-    <header class="section" id="header">
+    <header class="" id="header">
+
+      <div class="site-title">
+        <?php // if (is_front_page() || is_home() || is_front_page() && is_home()) {
+        // echo '<h1>';
+        // } 
+        ?>
+        <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_html(get_bloginfo('name')); ?>" rel="home">
+          <?php echo esc_html(get_bloginfo('name')); ?>
+        </a>
+        <?php // if (is_front_page() || is_home() || is_front_page() && is_home()) {
+        // echo '</h1>';
+        // } 
+        ?>
+      </div>
 
       <nav id="menu" class="nav">
         <?php wp_nav_menu(array('theme_location' => 'top-nav')); ?>
       </nav>
-
-      <div class="site-title section-heading">
-        <?php if (is_front_page() || is_home() || is_front_page() && is_home()) {
-          echo '<h1>';
-        } ?>
-        <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_html(get_bloginfo('name')); ?>" rel="home">
-          <?php echo esc_html(get_bloginfo('name')); ?>
-        </a>
-        <?php if (is_front_page() || is_home() || is_front_page() && is_home()) {
-          echo '</h1>';
-        } ?>
-      </div>
 
     </header>
     <div id="container">

@@ -1,0 +1,19 @@
+@mixin nav-link {
+	font-family: var(--font-sans-serif);
+	// font-size: 95%;
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	// letter-spacing: 0.08em;
+	// font-weight: 500;
+
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		border-block-end: 2px solid black; // underline
+	}
+	a:focus-visible {
+		box-shadow: 0 0 0 7px white, 0 0 0 8px black; // focus ring
+		outline: none;
+	}
+}

@@ -1,8 +1,9 @@
 <?php get_header();
 global $post; ?>
 <main id="content">
-    <?php if(have_posts()) {
-        while(have_posts()) { the_post(); ?>
+    <?php if (have_posts()) {
+        while (have_posts()) {
+            the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="header">
                     <h1 class="entry-title">
@@ -25,7 +26,7 @@ global $post; ?>
                 </header>
                 <div class="entry-content">
                     <div class="entry-attachment">
-                        <?php if(wp_attachment_is_image($post->ID)) {
+                        <?php if (wp_attachment_is_image($post->ID)) {
                             $att_image = wp_get_attachment_image_src($post->ID, 'full'); ?>
                             <p class="attachment">
                                 <a href="<?php echo esc_url(wp_get_attachment_url($post->ID)); ?>" title="<?php the_title_attribute(); ?>" rel="attachment">
@@ -33,22 +34,22 @@ global $post; ?>
                                 </a>
                             </p>
                         <?php } else { ?>
-                            <a href="<?php echo esc_url( wp_get_attachment_url( $post->ID ) ); ?>" title="<?php echo esc_attr( get_the_title( $post->ID ), 1 ); ?>" rel="attachment"><?php echo esc_url( basename( $post->guid ) ); ?></a>
+                            <a href="<?php echo esc_url(wp_get_attachment_url($post->ID)); ?>" title="<?php echo esc_attr(get_the_title($post->ID), 1); ?>" rel="attachment"><?php echo esc_url(basename($post->guid)); ?></a>
                         <?php } ?>
                     </div>
                     <div class="entry-caption">
-                        <?php if(!empty($post->post_excerpt)) {
+                        <?php if (!empty($post->post_excerpt)) {
                             the_excerpt();
                         } ?>
                     </div>
-                    <?php if(has_post_thumbnail()) {
+                    <?php if (has_post_thumbnail()) {
                         the_post_thumbnail();
                     } ?>
                 </div>
             </article>
-            <?php comments_template();
+    <?php comments_template();
         }
     } ?>
 </main>
-<?php get_sidebar();
+<?php // get_sidebar();
 get_footer();

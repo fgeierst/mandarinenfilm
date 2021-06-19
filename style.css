@@ -66,6 +66,18 @@ a { color: inherit; }
 
 .is-style-outline > .wp-block-button__link, .wp-block-button__link.is-style-outline { border-width: 1px; }
 
+#header { display: flex; flex-direction: column; flex-wrap: wrap; }
+
+@media (min-width: 700px) { #header { flex-direction: row; justify-content: space-between; } }
+
+.site-title { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; text-align: center; margin-block-end: var(--gap); }
+
+.site-title a { text-decoration: none; }
+
+.site-title a:hover { border-block-end: 2px solid black; }
+
+.site-title a:focus-visible { box-shadow: 0 0 0 7px white, 0 0 0 8px black; outline: none; }
+
 .menu { padding-inline-start: 0; display: flex; flex-wrap: wrap; justify-content: space-around; }
 
 @media (min-width: 700px) { .menu { justify-content: flex-end; } }
@@ -78,11 +90,13 @@ a { color: inherit; }
 
 .menu-item a:focus-visible { box-shadow: 0 0 0 7px white, 0 0 0 8px black; outline: none; }
 
-.menu-item:not(:last-child) { margin-inline-end: var(--gap); }
+.menu-item:not(:last-child) { margin-inline-end: calc(var(--gap)*2); }
+
+#footer h2 { text-align: unset; padding-block-start: 0; padding-block-end: 0; }
 
 .footer-menu li { font-family: var(--font-sans-serif); text-transform: uppercase; letter-spacing: 0.125em; margin-block-end: var(--gap); }
 
-.footer-menu li a { text-decoration: none; border-block-end: 2px solid transparent; }
+.footer-menu li a { text-decoration: none; }
 
 .footer-menu li a:hover { border-block-end: 2px solid black; }
 
@@ -101,17 +115,15 @@ a { color: inherit; }
 
 @media (max-width: 599px) { .wp-block-column:not(:last-child) { border-block-end: var(--border); } }
 
-#header, #content > article > .entry-content:first-of-type > *, #footer-widgets > ul > *:not(:last-child) { border-block-end: var(--border); }
+#content > article > .entry-content:first-of-type > *, #footer-widgets > ul > *:not(:last-child) { border-block-end: var(--border); }
 
-#header, #content > article > .entry-content:first-of-type > *:not(.wp-block-columns), #content > article > .entry-content:first-of-type .wp-block-column:not(.section__image), #footer-widgets > ul > * { padding-inline-start: var(--gap); padding-inline-end: var(--gap); padding-block-start: var(--gap); padding-block-end: var(--gap); }
+h1, h2 { text-align: center; }
 
-.section-heading { text-align: center; }
+h1 a, h2 a { text-decoration: none; }
 
-.section-heading h1 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2.7); }
+h1 { font-size: 2em; padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2.7); }
 
-.section-heading a { text-decoration: none; }
-
-h2.section-heading, h3.section-heading, h4.section-heading, h5.section-heading, h6.section-heading { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2); }
+h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)*2); }
 
 .news-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; border-block-end: none !important; }
 

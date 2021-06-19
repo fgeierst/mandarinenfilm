@@ -6,17 +6,17 @@
             <?php the_author_link(); ?>
         </h1>
         <div class="archive-meta">
-            <?php if('' != get_the_author_meta('user_description')) {
+            <?php if ('' != get_the_author_meta('user_description')) {
                 echo esc_html(get_the_author_meta('user_description'));
             } ?>
         </div>
         <?php rewind_posts(); ?>
     </header>
-    <?php while(have_posts()) {
+    <?php while (have_posts()) {
         the_post();
         get_template_part('entry');
     }
     get_template_part('nav', 'below'); ?>
 </main>
-<?php get_sidebar();
+<?php // get_sidebar();
 get_footer();

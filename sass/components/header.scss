@@ -1,0 +1,15 @@
+#header {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	@media (min-width: 700px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+.site-title {
+	@include nav-link;
+	text-align: center;
+	margin-block-end: var(--gap);
+}

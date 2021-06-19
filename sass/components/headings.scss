@@ -1,0 +1,18 @@
+h1,
+h2 {
+	text-align: center;
+	a {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	font-size: 2em;
+	padding-block-start: calc(var(--gap)*2);
+	padding-block-end: calc(var(--gap)*2.7);
+}
+
+h2 {
+	padding-block-start: calc(var(--gap)*2);
+	padding-block-end: calc(var(--gap)*2);
+}
