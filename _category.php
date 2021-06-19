@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<!-- CATEGORY -->
 <main id="content">
     <header class="header">
         <h1 class="entry-title">
