@@ -190,7 +190,7 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 
 @media (hover: none) { .film-cards-wrapper { scroll-snap-type: x mandatory; } }
 
-.film-cards { display: grid; grid-auto-flow: column; justify-content: center; }
+.film-cards { display: grid; grid-auto-flow: column; }
 
 .film-cards > li { width: 17em; height: 22em; border-inline-end: 4px solid white; border-block-end: var(--border); display: grid; background-color: var(--dark-color); color: white; text-align: center; }
 

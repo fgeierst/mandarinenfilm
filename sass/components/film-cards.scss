@@ -5,7 +5,7 @@
 .film-cards {
 	display: grid;
 	grid-auto-flow: column;
-	justify-content: center;
+	// justify-content: center;
 	& > li {
 		@include auto-scroll-item;
 		width: 17em;
