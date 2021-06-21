@@ -10,16 +10,20 @@
 		@include auto-scroll-item;
 		width: 20em;
 		height: 20em;
-		overflow: hidden;
+		// overflow: hidden;
 		border-inline-end: var(--border);
 		border-block-end: var(--border);
 		padding: var(--gap);
-		display: grid;
-		grid-template-rows: min-content 1fr;
-		gap: var(--gap);
+		display: flex;
+		flex-direction: column;
+		// grid-template-rows: min-content 1fr;
+		// gap: var(--gap);
 	}
 	& > li:first-child {
 		border-inline-start: var(--border);
+	}
+	& a {
+		text-decoration: none;
 	}
 }
 
@@ -28,26 +32,44 @@
 		font-family: var(--font-sans-serif);
 		text-transform: uppercase;
 		font-size: 75%;
+		flex: 0;
 	}
-	&__content {
-		display: grid;
-		overflow: hidden;
-	}
-	&__content > .wp-block-group__inner-container {
-		display: grid;
-		grid-template-rows: min-content 1fr;
-		gap: var(--gap);
-		align-items: center;
-	}
+	// &__content {
+	// 	display: grid;
+	// 	overflow: hidden;
+	// }
+	// &__content > .wp-block-group__inner-container {
+	// 	display: grid;
+	// 	grid-template-rows: min-content 1fr;
+	// 	gap: var(--gap);
+	// 	align-items: center;
+	// }
 	&__title {
 		text-align: center;
 		font-size: inherit;
 		font-weight: inherit;
+		margin-block-start: var(--gap);
+		margin-block-end: var(--gap) !important;
+		flex: .5;
+	}
+	&__title > a::after {
+		content: " →";
+		color: white;
+	}
+	&__title:hover > a::after {
+		color: black;
 	}
 	&__image {
-		padding: var(--gap);
+		// padding: var(--gap);
+		flex: 1;
+		min-height: 0; // allows the image to shrink (!)
+		display: flex;
+		justify-content: center;
+		// align-items: center;
 		& img {
 			display: block;
+			width: auto;
+			height: 100%;
 		}
 	}
 }

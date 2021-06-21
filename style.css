@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Mandarinenfilm
 Author: Florian Geierstanger
@@ -160,23 +161,25 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 
 .news-cards { display: grid; grid-auto-flow: column; margin-inline-end: var(--gap); }
 
-.news-cards > li { width: 20em; height: 20em; overflow: hidden; border-inline-end: var(--border); border-block-end: var(--border); padding: var(--gap); display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); }
+.news-cards > li { width: 20em; height: 20em; border-inline-end: var(--border); border-block-end: var(--border); padding: var(--gap); display: flex; flex-direction: column; }
 
 @media (hover: none) { .news-cards > li { scroll-snap-align: center; } }
 
 .news-cards > li:first-child { border-inline-start: var(--border); }
 
-.news-card__date { font-family: var(--font-sans-serif); text-transform: uppercase; font-size: 75%; }
+.news-cards a { text-decoration: none; }
 
-.news-card__content { display: grid; overflow: hidden; }
+.news-card__date { font-family: var(--font-sans-serif); text-transform: uppercase; font-size: 75%; flex: 0; }
 
-.news-card__content > .wp-block-group__inner-container { display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); align-items: center; }
+.news-card__title { text-align: center; font-size: inherit; font-weight: inherit; margin-block-start: var(--gap); margin-block-end: var(--gap) !important; flex: .5; }
 
-.news-card__title { text-align: center; font-size: inherit; font-weight: inherit; }
+.news-card__title > a::after { content: " →"; color: white; }
 
-.news-card__image { padding: var(--gap); }
+.news-card__title:hover > a::after { color: black; }
 
-.news-card__image img { display: block; }
+.news-card__image { flex: 1; min-height: 0; display: flex; justify-content: center; }
+
+.news-card__image img { display: block; width: auto; height: 100%; }
 
 .film-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; border-block-end: none; display: flex; justify-content: center; }
 
@@ -213,5 +216,7 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 .news-archive { display: grid; grid-template-columns: repeat(auto-fill, 20em); justify-content: center; margin-inline-end: var(--gap); margin-block-end: 0 !important; gap: 1px; }
 
 .news-archive > li { width: 20em; height: 20em; overflow: hidden; outline: var(--border); padding: var(--gap); display: grid; grid-template-rows: min-content 1fr; gap: var(--gap); }
+
+.news-archive a { text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
