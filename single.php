@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="content">
+<main id="content" class="single-entry">
     <?php if (have_posts()) {
         while (have_posts()) {
             the_post();
@@ -13,5 +13,4 @@
         <?php get_template_part('nav', 'below-single'); ?>
     </footer>
 </main>
-<?php // get_sidebar();
-get_footer();
+<?php get_footer();

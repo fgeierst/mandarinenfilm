@@ -1,6 +1,10 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header>
-        <?php if (is_singular()) {
+    <header class="">
+        <?php
+        if (!is_search()) {
+            get_template_part('entry', 'meta');
+        }
+        if (is_singular()) {
             echo '<h1 class="entry-title">';
         } else {
             echo '<h2 class="entry-title">';
@@ -14,9 +18,7 @@
             echo '</h2>';
         }
         // edit_post_link();
-        if (!is_search()) {
-            get_template_part('entry', 'meta');
-        } ?>
+        ?>
     </header>
     <?php get_template_part('entry', (is_front_page() || is_home() || is_front_page() && is_home() || is_archive() || is_search() ? 'summary' : 'content'));
     if (is_singular()) {

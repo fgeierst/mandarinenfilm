@@ -1,0 +1,27 @@
+.single-entry {
+	// background-color: pink;
+	& header,
+	& .entry-content {
+		// background-color: powderblue;
+		border-block-end: var(--border);
+		padding-inline-start: var(--gap);
+		padding-inline-end: var(--gap);
+		padding-block-start: var(--gap);
+		padding-block-end: var(--gap);
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 55em) 1fr;
+		& > * {
+			grid-column: 2 / -2;
+		}
+	}
+	& header {
+		& > h1 {
+			padding-block-start: 1rem;
+			padding-block-end: var(--gap);
+		}
+		& .entry-meta {
+			padding-block-start: var(--gap);
+			text-align: center;
+		}
+	}
+}
