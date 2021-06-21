@@ -66,6 +66,10 @@
 		display: flex;
 		justify-content: center;
 		// align-items: center;
+		& a {
+			display: flex;
+			justify-content: center;
+		}
 		& img {
 			display: block;
 			width: auto;

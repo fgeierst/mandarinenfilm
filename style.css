@@ -179,6 +179,8 @@ h2 { padding-block-start: calc(var(--gap)*2); padding-block-end: calc(var(--gap)
 
 .news-card__image { flex: 1; min-height: 0; display: flex; justify-content: center; }
 
+.news-card__image a { display: flex; justify-content: center; }
+
 .news-card__image img { display: block; width: auto; height: 100%; }
 
 .film-cards-wrapper { overflow-x: auto; -webkit-overflow-scrolling: auto; border-block-end: none; display: flex; justify-content: center; }
