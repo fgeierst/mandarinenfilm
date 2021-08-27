@@ -27,7 +27,7 @@
         // } 
         ?>
         <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_html(get_bloginfo('name')); ?>" rel="home">
-          <?php echo esc_html(get_bloginfo('name')); ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/images/mandarinenfilm_logo_image.svg" width="138" height="70" alt="<?php echo esc_html(get_bloginfo('name')); ?>">
         </a>
         <?php // if (is_front_page() || is_home() || is_front_page() && is_home()) {
         // echo '</h1>';

@@ -10,11 +10,16 @@
 }
 
 .site-title {
-	@include nav-link;
 	text-align: center;
 	margin-block-end: var(--gap);
 }
 
 .header {
 	border-block-end: var(--border);
+}
+
+.entry-title {
+	&__img {
+		max-width: 80%;
+	}
 }
