@@ -1,0 +1,10 @@
+.tag-archive {
+	&__list {
+		margin-bottom: 5rem;
+	}
+	&__entry {
+		font-size: 2em;
+		border-bottom: var(--border);
+		text-align: center;
+	}
+}

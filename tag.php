@@ -10,13 +10,17 @@
             } ?>
         </div>
     </header>
-    <?php if (have_posts()) {
+    <ul class="tag-archive__list">
+            <?php if (have_posts()) {
         while (have_posts()) {
-            the_post();
-            get_template_part('entry');
-        }
-    }
-    get_template_part('nav', 'below'); ?>
+            the_post(); ?>
+            <li class="tag-archive__entry">
+                <a class="tag-archive__link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+    <?php }
+    } ?>
+    </ul>
+    <?php  get_template_part('nav', 'below'); ?>
 </main>
-<?php // get_sidebar();
+<?php
 get_footer();
