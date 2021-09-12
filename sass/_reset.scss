@@ -201,6 +201,6 @@ section {
 /* ---------  fix block images aspect ratio bug  */
 .wp-block-image img,
 .wp-block-image svg {
-	// max-width: 100%;
 	height: auto;
+	align-self: flex-start; // fix safari 13 aspect ratio bug
 }
