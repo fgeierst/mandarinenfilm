@@ -28,6 +28,7 @@
 }
 
 .entry-content > .wp-block-group.alignwide {
+	padding-block-start: var(--gap);
 	iframe {
 		width: 100%;
     height: auto;
