@@ -27,6 +27,14 @@
 	padding-block-start: 0;
 }
 
+.entry-content > .wp-block-group.alignwide {
+	iframe {
+		width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+	}
+}
+
 .entry-content > .wp-block-group.alignfull > * {
 	grid-column: 1 / -1;
 }
@@ -63,5 +71,9 @@
 	.wp-block-image {
 		margin: 0;
 		display: flex;
+	}
+	.aligncenter {
+		display: flex;
+		justify-content: center;
 	}
 }
