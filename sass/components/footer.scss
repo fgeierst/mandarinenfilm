@@ -5,9 +5,23 @@
 		padding-block-start: 0;
 		padding-block-end: 0;
 	}
-	& .footer-menu {
-		align-content: flex-end;
+
+	& .wp-block-buttons {
+		@media (max-width: 600px) {
+			justify-content: flex-start
+		}
+		@media (min-width: 600px) and (max-width: 781px) {
+			justify-content: flex-end
+		}
+	}
+	
+	& .menu {
+		flex-direction: column;
+		@media (min-width: 782px) {
+			align-items: flex-end;
+			& .menu-item {
+				margin-inline-end: unset;
+			}
+		}
 	}
 }
-
-
