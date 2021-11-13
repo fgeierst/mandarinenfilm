@@ -23,6 +23,10 @@
 	padding-block-start: var(--gap);
 }
 
+.entry-content > .wp-block-group.has-columns > * {
+	padding-block-start: 0;
+}
+
 .entry-content > .wp-block-group.alignwide > * {
 	padding-block-start: 0;
 }
