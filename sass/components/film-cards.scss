@@ -35,6 +35,8 @@
 		grid-column: 1 / -1;
 		grid-row: 1 / -1;
 		display: grid;
+		position: relative;
+		
 		& img {
 			object-fit: cover;
 			width: 100%;
@@ -55,5 +57,11 @@
 	}
 	&__title {
 		color: white;
+
+		> a:after {
+			content: '';
+			inset: 0;
+			position: absolute;
+		}
 	}
 }
