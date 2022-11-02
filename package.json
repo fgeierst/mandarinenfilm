@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "scripts": {
     "start": "chokidar \"sass/**/*.scss\" -c \"npm run build\" --initial",
-    "build": "node-sass sass/style.scss style.css --output-style compact --indent-type tab --indent-width 1 --source-map true",
-    "prod": "node-sass sass/style.scss style.css --output-style compressed --source-map true"
+    "build": "sass sass/style.scss style.css",
+    "prod": "sass -s compressed --no-source-map sass/style.scss:style.css"
   },
   "author": "Florian Geierstanger",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^6.0.0",
-    "chokidar-cli": "^2.1.0"
+    "chokidar-cli": "^3.0.0",
+    "sass": "^1.54.9"
   }
 }
