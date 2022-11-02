@@ -27,6 +27,9 @@
 }
 
 .film-card {
+	&__content {
+		z-index: 5;
+	}
 	&__content,
 	&__image {
 		grid-column: 1 / -1;
